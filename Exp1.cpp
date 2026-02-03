@@ -7,7 +7,8 @@ void exp1() {
     cout << "Enter number of elements: ";
     cin >> n;
     cout << "Enter elements:\n";
-    for (int i = 0; i < n; ++i) cin >> arr[i];
+    for (int i = 0; i < n; ++i) 
+      cin >> arr[i];
 
     cout << "\nEnter position to insert (0-" << n << "): ";
     cin >> pos;
@@ -17,10 +18,12 @@ void exp1() {
         cout << "Invalid position\n";
         return;
     }
-    for (int i = n; i > pos; --i) arr[i] = arr[i-1];
+    for (int i = n; i > pos; --i)
+       arr[i] = arr[i-1];
     arr[pos] = val; n++;
     cout << "Array after insertion: ";
-    for (int i = 0; i < n; ++i) cout << arr[i] << " ";
+    for (int i = 0; i < n; ++i)
+       cout << arr[i] << " ";
     cout << "\n\nEnter position to delete (0-" << n-1 << "): ";
     cin >> pos;
     if(pos < 0 || pos >= n){
